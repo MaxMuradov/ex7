@@ -273,7 +273,7 @@ def sort_owners_by_num_pokemon():
         return
     owner_list = []
     gather_all_owners(ownerRoot, owner_list)
-    owner_list.sort(choice=lambda owner_node: (len(owner_node['pokedex']), owner_node['owner'].lower()))
+    owner_list.sort(key=lambda owner_node: (len(owner_node['pokedex']), owner_node['owner'].lower()))
     print("=== The Owners we have, sorted by number of Pokemons ===")
     for i in owner_list:
         print(f"Owner: {i['owner']} (has {len(i['pokedex'])} Pokemon)")
