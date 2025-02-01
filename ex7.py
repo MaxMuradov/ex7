@@ -195,11 +195,11 @@ def add_pokemon_to_owner(owner_node):
     """
     id = read_int_safe("Enter Pokemon ID to add: ")
     if id < 0 or id > 135:
-        print(f"ID {id} not found in Hoenn data.\n")
+        print(f"ID {id} not found in Honen data.\n")
         return
     new_pokemon = get_poke_dict_by_id(id)
     if new_pokemon is None:
-        print(f"ID {id} not found in Hoenn data.\n")
+        print(f"ID {id} not found in Honen data.\n")
         return
     for i in owner_node['pokedex']:
         if i == new_pokemon:
